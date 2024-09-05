@@ -1,14 +1,22 @@
-import useFetchin from '@customHooks/useFetchin.js'
 
-function Card ({uri}){
-    const {data} = useFetchin(uri);
+
+
+
+import {GlobalContext} from '@context/GlobalContext.jsx'
+import { useContext } from 'react'
+
+function Card (){
+    
+
+    const {nameCategory} = useContext(GlobalContext)
 
 
     return (
         <ul>
-            {
-                /* load card  */
-            }
+            <h1>{nameCategory}</h1>
         </ul>
     )
 }
+
+
+export default Card

@@ -2,7 +2,7 @@ import { useState ,useEffect} from "react";
 import fetchService  from '@services/fetchService.js'
 
 
-function useFetchin(uri){
+function useFetch(uri){
     const [data ,setData]  = useState([]) 
     
 
@@ -22,4 +22,4 @@ function useFetchin(uri){
 
 }
 
-export default useFetchin
+export default useFetch
