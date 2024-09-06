@@ -1,5 +1,5 @@
 import { useState ,useEffect} from "react";
-import fetchService  from '@services/fetchService.js'
+
 
 
 function useFetch(uri){
@@ -9,9 +9,13 @@ function useFetch(uri){
     
     useEffect(()=>{
             
-        fetchService(uri).then(res=>{
-            setData(res)
-        })
+        fetch(uri)
+            .then(res=>res.json())
+            .then(res=>{
+                setData(res)
+            })
+
+        
     
     },[uri])
 

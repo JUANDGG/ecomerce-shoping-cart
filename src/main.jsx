@@ -3,12 +3,19 @@ import ReactDom from 'react-dom/client'
 import App from '@components/App.jsx'
 
 
+import { GlobalContextProvider } from '@context/GlobalContext.jsx';
 
 
 const ELEMENT_ROOT =document.getElementById('root')
 
-const ROOT =ReactDom.createRoot(ELEMENT_ROOT)
 
-ROOT.render(<App />)
+
+ReactDom.createRoot(ELEMENT_ROOT).render(
+    <GlobalContextProvider>
+        <App />
+    </GlobalContextProvider>
+
+
+)
 
 
