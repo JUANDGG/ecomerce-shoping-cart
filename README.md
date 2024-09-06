@@ -4,7 +4,7 @@
 1 . Ecomerce
 
 👌 muestra una lista de productos que vienen de un json
-- añade un filtro por categoria
+👌 añade un filtro por categoria
 - añade un filtro por precio
 
 

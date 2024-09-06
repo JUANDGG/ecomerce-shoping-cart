@@ -1,19 +1,27 @@
 
 
-
-
-import {GlobalContext} from '@context/GlobalContext.jsx'
-import { useContext } from 'react'
+import useFilterCard from '@customHooks/useFilterCard.js'
 
 function Card (){
     
 
-    const {nameCategory} = useContext(GlobalContext)
+    const {data} =useFilterCard()
+    
+    console.log(data);
+    
 
 
     return (
         <ul>
-            <h1>{nameCategory}</h1>
+            {
+                data && data.map(res=>(
+                    <li key={res.id}>
+                        <img src={res.image} alt="" />
+                        <p>{res.title}</p>
+                        <small>$ {res.price}</small>
+                    </li>
+                ))
+            }
         </ul>
     )
 }
