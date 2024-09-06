@@ -1,4 +1,10 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     
     background-color: #ebebeb;
@@ -9,20 +15,31 @@ body {
     padding: 10px;
 }
 
-.st-header header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+
+.st-header{
+    
+    background-color: #ffe600;
+    margin-bottom: 20px;
 }
 
+.st-header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+   
+}
+
+
+.st-header header input{
+    width: 40rem;
+
+}
 
 
 .st-header header img{
     width: 5rem;
-    
-    
-    
 }
 
 
@@ -62,8 +79,9 @@ body {
 
 .st-products main ul li img{
     height: 20rem;
-    width: 20rem;
+    width: 30rem;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -73,5 +91,5 @@ body {
  
 .st-products aside {
     color:#4b4b4b;
-
+   
 }
